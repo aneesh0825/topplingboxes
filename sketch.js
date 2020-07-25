@@ -14,7 +14,7 @@ function setup(){
 
 
    
-    ground = new Ground(600,height,1200,20)
+    ground = new Ground(600,height,1200,20,"white")
 }
 
 function draw(){
@@ -24,4 +24,9 @@ function draw(){
   bin.display();
   paper.display();
 
+}
+function keyPressed(){
+  if (keyCode == UP_ARROW) {
+    Matter.Body.applyForce(paper.body, paper.body.position, {x:85, y: -85  })
+  }
 }
