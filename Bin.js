@@ -1,26 +1,14 @@
-class Pig {
-    constructor(x, y) {
-      var options = {
-          'restitution':0.8,
-          'friction':0.3,
-          'density':1.0
-      }
-      this.body = Bodies.rectangle(x, y, 50, 50, options);
-      this.width = 50;
-      this.height = 50;
-      
-      World.add(world, this.body);
+class Bin {
+    constructor() {
+        side1=new Ground(900,370,200,20,"white");
+        side2 = new Ground(800,320,20,100,"white")
+        side3 = new Ground(1000,320,20,100,"white")
+          
     }
     display(){
-      var pos =this.body.position;
-      var angle = this.body.angle;
-      push();
-      translate(pos.x, pos.y);
-      rotate(angle);
-      rectMode(CENTER);
-      fill("green");
-      rect(0, 0, this.width, this.height);
-      pop();
+      side1.display();
+      side2.display();
+      side3.display();
     }
   };
   
